@@ -2,6 +2,8 @@ from openai import OpenAI
 import os
 import streamlit as st
 
+st.sidebar.markdown(f"env={os.environ}")
+
 avatars={"system":"💻🧠","user":"🧑‍💼","assistant":"🎓"}
 client=OpenAI(api_key=os.environ['OPENAI_API_KEY'])
 
